@@ -1,10 +1,9 @@
-version: "3.6"
-
 services:
-  faireva-testing:
-    image: "indigodatacloud/ci-images:python3.6"
-    hostname: "faireva-testing"
+  qc.fair_randy-smalt-beetle:
+    image: ferag/fair_eva:fair
     volumes:
-     - type: bind
-       source: ./
-       target: /faireva-testing
+    - source: ./
+      target: /sqaaas-build
+      type: bind
+    working_dir: /sqaaas-build
+version: '3.7'
