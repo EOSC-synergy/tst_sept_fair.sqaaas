@@ -1,5 +1,5 @@
 services:
-  qc.fair_slaphappy-lilac-tiger:
+  qc.fair_hazy-tomato-sponge:
     image: steinsteiny/fuji:fair
     volumes:
     - source: ./
