@@ -1,14 +1,14 @@
 config:
-  project_repos:
-    myrepo:
-      repo: 'https://github.com/EOSC-synergy/FAIR_eva'
-
+  credentials: []
+  project_repos: {}
+environment: {}
 sqa_criteria:
-  qc_style:
+  QC.FAIR:
     repos:
-      myrepo:
-        container: faireva-testing
-        tox:
-          tox_file: '/faireva-testing/tox.ini'
-          testenv:
-            - pep8
+      this_repo:
+        commands:
+        - '/bin/curl -H ''Content-Type: application/json'' -X POST -d ''{"id": "10261/157765",
+          "repo": "oai-pmh", "oai_base": "http://digital.csic.es/dspace-oai/request"}''
+          http://localhost:9090/v1.0/rda/rda_all'
+        container: qc.fair_randy-smalt-beetle
+timeout: 600
