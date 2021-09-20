@@ -7,8 +7,8 @@ sqa_criteria:
     repos:
       this_repo:
         commands:
-        - '/bin/curl -H ''Content-Type: application/json'' -X POST -d ''{"id": "10261/157765",
-          "repo": "oai-pmh", "oai_base": "http://digital.csic.es/dspace-oai/request"}''
-          http://localhost:9090/v1.0/rda/rda_all'
-        container: qc.fair_randy-smalt-beetle
+        - 'curl -H ''Accept: application/json'' -H "Content-Type: application/json"
+          -H "Authorization: Basic bWFydmVsOndvbmRlcndvbWFu" -X POST -d ''{"metadata_service_endpoint":"http://digital.csic.es/dspace-oai/request","metadata_service_type":"oai_pmh","object_identifier":"http://hdl.handle.net/10261/157765","test_debug":true,"use_datacite":true}''
+          http://localhost:1071/fuji/api/v1/evaluate'
+        container: qc.fair_slaphappy-lilac-tiger
 timeout: 600
